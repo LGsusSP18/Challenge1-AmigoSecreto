@@ -3,13 +3,17 @@
 let friends=[];
 
 function addFriend(){
+    let NFriend=document.getElementById("friend").value;
+    friends.push(NFriend);
+    console.log(friends);
+    updateFriend();
     return;
 }
 
-function updateFriend(params){
+function updateFriend(){
     return;
 }
 
-function sortFriend(params){
+function sortFriend(){
     return;
 }
