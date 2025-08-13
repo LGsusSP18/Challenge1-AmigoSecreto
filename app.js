@@ -19,6 +19,8 @@ function addFriend(){
 function updateFriend(){
     let list=document.getElementById("listaAmigos");
     list.innerHTML="";
+    let result=document.getElementById("resultado");
+    result.innerHTML="";
     list.innerHTML=listFriends();
     console.log(listFriends());
     return;
@@ -33,5 +35,13 @@ function listFriends() {
 }
 
 function sortFriend(){
-    return;
+    if(friends.length<1){
+        alert("No hay amigos añadidos, añade amigos y vuelve a intentar")
+    }
+    else{
+        let list=document.getElementById("listaAmigos");
+        list.innerHTML="";
+        let result=document.getElementById("resultado");
+        result.innerHTML="Tu amigo secreto es: "+friends[Math.floor((Math.random()*friends.length))];
+        return;}
 }
